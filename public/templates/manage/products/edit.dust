@@ -1,0 +1,66 @@
+{>"layouts/manage" /}
+
+{<body}
+    <div class="row">
+      <div class="large-12 columns">
+        <h2>Edit Product</h2>
+        <form method="post" action="/manage/products/edit/{product._id}">
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Title
+                <input type="text" name="title" value="{product.title}" />
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Country
+                <input type="text" name="country" value="{product.country}" />
+              </label>
+            </div>
+            <div class="large-12 columns">
+              <label>Collection
+                <input type="text" name="collect" value="{product.collect}" />
+              </label>
+            </div>
+            <div class="large-12 columns">
+              <label>Price
+                <input type="text" name="price" value="{product.price}" />
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Category
+                <select name="category">
+                {#categories}
+                  <option value="{.name}">{.name}</option>
+                {/categories}
+                </select>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <label>Description
+                <textarea name="description">{product.description}</textarea>
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+                <label>Cover URL
+                  <input name="cover" type="text" value="{product.cover}"/>
+                </label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="large-12 columns">
+              <input type="submit" class="button" value="Submit">
+            </div>
+          </div>
+          <input type="hidden" name="_csrf" value="{_csrf}">
+          </form>
+      </div>  
+    </div>
+{/body}

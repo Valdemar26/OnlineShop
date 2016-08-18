@@ -1,0 +1,24 @@
+{>"layouts/master" /}
+
+{<body}
+  	<div class="large-4 columns product">
+  	   <img src="/img/backpack/{product.cover}">
+  	</div>
+  	<div class="large-8 columns product">
+  		<h2>{product.title}</h2>
+      <ul class="productInfo">
+        <li>Category: {product.category}</li>
+        <li>Author: {product.country}</li>
+        <li>Publisher: {product.collect}</li>
+    </ul>
+    <br>
+    <div class="price"><span>${product.price}</span></div>
+    <br>
+    <p>{product.description}</p>
+    
+    <form method="post" action="/cart/{product._id}">
+    <input type="submit" class="button success" value="Add To Cart">
+    <input type="hidden" value="{_csrf}" name="_csrf">
+    </form>
+  	</div>
+{/body}

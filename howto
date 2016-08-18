@@ -1,0 +1,31 @@
+We start in command line:
+
+'npm install -g yo generator-kraken bower grunt-cli'
+
+'yo kraken'
+
+and now our project are created!
+
+In our directory folder run terminal and put
+'npm install mongodb mongoose connect-flash express-messages'
+
+To start our project in terminal write
+'npm start'
+
+Now we create our database. First we need to start MongoDB. In terminal we put 'mongo' and mongo shell will open.
+Next we create 'onlineshop' database - write in terminal 'use onlineshop'. After this we create two collection:
+db.createCollection('products');  and  db.createCollection('categories');
+
+Next commands:
+
+db.products.insert({title:'Yellow Backpack', description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', category:'Backpack', country:'USA', collect:'Summer 2016', price:'19.99', cover:'1.png'});
+
+db.products.insert({title:'Red Backpack', description:'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', category:'Backpack', country:'Ukraine', collect:'Winter 2016', price:'14.49', cover:'2.png'});
+
+db.categories.insert({name:'Backpack'});
+db.categories.insert({name:'Luggage'});
+db.categories.insert({name:'Woman'});
+db.categories.insert({name:'Wallet'});
+db.categories.insert({name:'Belt'});
+
+And now, in 'Manage Area', if you 'add category' or 'edit||delete product' you can see Error. I don't know why...

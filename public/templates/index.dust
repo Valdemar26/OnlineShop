@@ -1,0 +1,14 @@
+{>"layouts/master" /}
+
+{<body}
+    {#products}
+    	<div class="large-3 columns product product_index">
+    		<img src="img/backpack/{.cover}">
+    		<h4>{.title}</h4>
+    		<p>{.truncText}</p>
+    		<div class="price">Buy it for <span>${.price}</span></div>
+    		<br>
+    		<a href="/products/details/{._id}" class="button small">Product Details</a>
+    	</div>
+    {/products}
+{/body}
